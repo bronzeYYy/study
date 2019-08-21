@@ -8,6 +8,8 @@ import java.util.Random;
 // 排序方法测试的模板类
 public abstract class SortTestTemplate {
     private Sort sort;
+
+    // 这个方法由子类实现
     protected abstract Sort getSort();
     /*
      * create by: chen

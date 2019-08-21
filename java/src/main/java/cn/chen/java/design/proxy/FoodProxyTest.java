@@ -12,7 +12,4 @@ public class FoodProxyTest {
         proxy = (Food) foodProxy.getProxy(new Noodle());
         proxy.eat();
     }
-    static class T{
-        static String s = "123";
-    }
 }

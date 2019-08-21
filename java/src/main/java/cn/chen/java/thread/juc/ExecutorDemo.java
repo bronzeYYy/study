@@ -19,8 +19,6 @@ public class ExecutorDemo {
         executor.execute(executorDemo::do1);
         executor.execute(executorDemo::do2);
 
-//        juc.execute(executorDemo::do3);
-//        juc.execute(executorDemo::do4);
 
         try {
             executorDemo.countDownLatch.await();

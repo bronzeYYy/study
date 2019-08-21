@@ -22,7 +22,7 @@ public class CountDownLatchDemo {
             });
         }
         try {
-            countDownLatch.await(); // 等待所有线程
+            countDownLatch.await(); // 等待所有线程执行到14行
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

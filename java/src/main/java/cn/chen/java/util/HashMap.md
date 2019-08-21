@@ -16,5 +16,7 @@
 
 ### ConcurrentHashMap
 
-使用分段锁
+不能存放null
+
+使用分段锁，只锁住当前线程操作的桶
 

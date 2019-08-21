@@ -7,8 +7,10 @@ import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class LockTest {
+    // 可重入锁
     private static ReentrantLock lock = new ReentrantLock();
     private static synchronized void run() {
+        // synchronized可重入锁
         System.out.println("run");
         run1();
     }
@@ -22,7 +24,7 @@ public class LockTest {
     }
     public static void main(String[] args) {
         ExecutorService service = Executors.newCachedThreadPool();
-        service.execute(LockTest::run1);
+//        service.execute(LockTest::run1);
         service.execute(LockTest::run);
         service.shutdown();
     }

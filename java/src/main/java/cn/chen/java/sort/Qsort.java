@@ -1,8 +1,5 @@
 package cn.chen.java.sort;
 
-import java.util.Arrays;
-import java.util.Random;
-
 public class Qsort implements Sort {
     /*
      * create by: chen
@@ -22,12 +19,13 @@ public class Qsort implements Sort {
         int j = start + 1;
         for (int k = start + 1; k <= end; k++) {
             if (a[k] < a[start]) {
+                // 比第一个（轴心点）小的往前交换
                 swap(a, j++, k);
             }
         }
-        swap(a, start, --j);
-        sort(a, start, j - 1);
-        sort(a, j + 1, end);
+        swap(a, start, --j); // 将轴心点移动到最后一个比它小的数的后面
+        sort(a, start, j - 1); // 轴心点之前的继续操作
+        sort(a, j + 1, end); // 轴心点之后的继续操作
     }
     private static void swap(int[] a, int i, int j) {
         int t = a[i];
