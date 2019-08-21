@@ -6,7 +6,11 @@
 
   <groupId>cn.chen</groupId>
   <artifactId>study</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>../spring-bean</module>
+  </modules>
 
 
 </project>
