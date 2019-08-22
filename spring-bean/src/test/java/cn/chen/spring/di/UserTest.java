@@ -22,9 +22,11 @@ public class UserTest {
     @Test
     public void springBeanTest() {
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(BeanConfig.class);
-        User user = annotationConfigApplicationContext.getBean(User.class);
-        user.doSomeString();
+//        User user = annotationConfigApplicationContext.getBean(User.class);
+//        user.doSomeString();
+
         System.out.println(annotationConfigApplicationContext.getBean(BeanLife.class));
+        annotationConfigApplicationContext.close();
     }
 
 }

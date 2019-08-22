@@ -2,10 +2,7 @@ package cn.chen.spring;
 
 import cn.chen.spring.di.User;
 import org.springframework.beans.BeansException;
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.BeanFactoryAware;
-import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -19,7 +16,7 @@ import org.springframework.stereotype.Component;
  *
  */
 @Component
-public class BeanLife implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean {
+public class BeanLife implements BeanNameAware, BeanFactoryAware, ApplicationContextAware, InitializingBean, DisposableBean {
     public BeanLife() {
         System.out.println("1.构造");
     }
@@ -49,4 +46,10 @@ public class BeanLife implements BeanNameAware, BeanFactoryAware, ApplicationCon
         // 在这一步之后会执行自定义初始化方法（如果有）
     }
 
+    @Override
+    public void destroy() throws Exception {
+        // 容器关闭执行这个方法
+        System.out.println("destroy");
+        // 这个方法之后会执行自定义销毁方法（如果有）
+    }
 }
