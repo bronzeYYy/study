@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.chen.spring.tx.dao.OrderDao">
+  <insert id="addSuccess">
+    insert into tx_success (name, time) value ('鼠标', now())
+  </insert>
+  <update id="subMoney">
+    update tx_info set money = money - 50
+  </update>
+</mapper>
