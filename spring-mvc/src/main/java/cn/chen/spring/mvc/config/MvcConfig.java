@@ -1,11 +1,19 @@
 package cn.chen.spring.mvc.config;
 
+import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+import javax.servlet.Filter;
 
 public class MvcConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class[] {RootConfig.class};
+    }
+
+    @Override
+    protected Filter[] getServletFilters() {
+        return new Filter[] { new CharacterEncodingFilter("UTF-8") };
     }
 
     @Override

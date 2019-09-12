@@ -10,6 +10,7 @@
         <module name="spring-bean" />
         <module name="spring-aop" />
         <module name="spring-mvc" />
+        <module name="spring-data-jpa" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">

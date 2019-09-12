@@ -33,6 +33,25 @@
     </dependency>
 
     <dependency>
+      <groupId>cn.chen</groupId>
+      <artifactId>spring-data-jpa</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+
+    <!--  json视图所需要的包  -->
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>2.10.0.pr1</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.10.0.pr1</version>
+    </dependency>
+
+
+    <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>3.1.0</version>
