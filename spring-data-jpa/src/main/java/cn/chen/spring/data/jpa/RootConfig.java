@@ -56,7 +56,7 @@ public class RootConfig {
         driverManagerDataSource.setDriverClassName("com.mysql.jdbc.Driver");
         driverManagerDataSource.setUrl("jdbc:mysql://localhost:3306/test?characterEncoding=utf-8");
         driverManagerDataSource.setUsername("root");
-        driverManagerDataSource.setPassword("9674464343..as");
+        driverManagerDataSource.setPassword("");
         return driverManagerDataSource;
     }
 }
